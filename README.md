@@ -1,70 +1,105 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Lojas Gabi
 
-## Available Scripts
+Aplicação web de um chat bot para sites E-commerce.
 
-In the project directory, you can run:
 
-### `npm start`
+![Logo](https://media.discordapp.net/attachments/1012374528422334525/1079065116684845126/image.png)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Referência
 
-### `npm test`
+ - [Amazon](https://www.amazon.com.br/)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+ - [Mercado Livre](https://www.mercadolivre.com.br/)
 
-### `npm run build`
+## Apêndice
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Tudo ok por aqui.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Autores
 
-### `npm run eject`
+- [Lucas Neves da Silva](https://www.linkedin.com/in/lucas-neves-da-silva-4058211a2/)
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+- [Karoline Lemos Gouvea Godoy](linkedin.com/in/karoline-lemos-gouvea-godoy-38a292151)
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- [Anna Lívia Meireles](linkedin.com/in/anna-lívia-meireles-164342184)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+- [Diego Costa](linkedin.com/in/diegoerc)
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+- [Jordy Nicholas](linkedin.com/in/jordy-nicholas)
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Documentação de cores
 
-### Code Splitting
+| Cor               | Hexadecimal                                                |
+| ----------------- | ---------------------------------------------------------------- |
+| Cor exemplo       | ![#0a192f](https://via.placeholder.com/10/0a192f?text=+) #0a192f |
+| Cor exemplo       | ![#f8f8f8](https://via.placeholder.com/10/f8f8f8?text=+) #f8f8f8 |
+| Cor exemplo       | ![#00b48a](https://via.placeholder.com/10/00b48a?text=+) #00b48a |
+| Cor exemplo       | ![#00d1a0](https://via.placeholder.com/10/00b48a?text=+) #00d1a0 |
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
 
-### Analyzing the Bundle Size
+## Demonstração
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+Insira um gif ou um link de alguma demonstração
 
-### Making a Progressive Web App
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## Funcionalidades
 
-### Advanced Configuration
+- Temas dark e light
+- Chat Bot
+- Carrinho de compras
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+## Instalação
 
-### Deployment
+Instale my-project com npm
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+```bash
+  npm install my-project
+  cd my-project
+```
+    
+## Aprendizados
 
-### `npm run build` fails to minify
+O que você aprendeu construindo esse projeto? Quais desafios você enfrentou e como você superou-os?
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+## Rodando localmente
+
+Clone o projeto
+
+```bash
+  git clone git@github.com:Taunt-byte/projeto-integrador2.git
+```
+
+Entre no diretório do projeto
+
+```bash
+  cd projeto-integrador2
+```
+
+Instale as dependências
+
+```bash
+  npm i
+```
+
+Inicie o servidor
+
+```bash
+  npm run start
+```
+
+
+## Suporte
+
+Para suporte, mande um email para lucasluan94@hotmail.com ou entre em contato pelo linkeding.
+
+
+## Screenshots
+
+![App Screenshot](https://via.placeholder.com/468x300?text=App+Screenshot+Here)
+
