@@ -1,4 +1,3 @@
-
 # Lojas Gabi
 
 Aplicação web de um chat bot para sites E-commerce.
