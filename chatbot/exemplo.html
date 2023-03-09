@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Chatbot Example</title>
+	<script src="https://cdn.jsdelivr.net/npm/botui/build/botui.min.js"></script>
+	<link href="https://cdn.jsdelivr.net/npm/botui/build/botui.min.css" rel="stylesheet" />
+</head>
+<body>
+	<div id="chatbot"></div>
+	<script>
+		var botui = new BotUI('chatbot');
+		
+		botui.message.bot({
+			delay: 500,
+			content: 'Olá! Em que posso ajudar?'
+		});
+
+		botui.action.text({
+			action: {
+				placeholder: 'Digite sua mensagem...'
+			}
+		}).then(function(res) {
+			botui.message.human({
+				delay: 500,
+				content: res.value
+			});
+
+			// Aqui você pode adicionar sua lógica para interpretar a mensagem do usuário e responder apropriadamente.
+			// Por exemplo, você pode usar uma API de Processamento de Linguagem Natural para analisar a mensagem do usuário e fornecer uma resposta relevante.
+			botui.message.bot({
+				delay: 500,
+				content: 'Desculpe, eu ainda sou um chatbot muito básico e não consigo processar sua mensagem.'
+			});
+		});
+	</script>
+</body>
+</html>

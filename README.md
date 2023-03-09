@@ -54,11 +54,11 @@ Insira um gif ou um link de alguma demonstração
 
 ## Instalação
 
-Instale my-project com npm
+Instale as dependencias do app com npm
 
 ```bash
-  npm install my-project
-  cd my-project
+  cd app
+  npm i
 ```
     
 ## Aprendizados
