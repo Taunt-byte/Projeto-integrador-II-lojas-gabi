@@ -1,11 +1,13 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import Carousel from './Components/Carousel';
+import HomePage from './Components/Home';
 
 function App() {
-  return (
-    <div className="App">
-      <h1>Produtos novos</h1>
-    </div>
+  return ( 
+    <main>
+      <HomePage />
+      <Carousel />
+    </main>
   );
 }
 
