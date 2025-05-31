@@ -1,29 +1,27 @@
-export default function Navbar() {
+import React from "react";
+
+export default function Navbar({ cartCount, onCartClick }) {
   return (
-    <main>
-        <div className="bg-gray-800 dark:bg-gray-900 text-slate-100">
-        <div className="flex items-center justify-between h-16">
-          <div className="flex items-center">
-            <a href="#home" className="p-2 text-lg font-semibold">
-              Lojas Gabi
-            </a>
-          </div>
-          <div className="ml-10 flex items-center space-x-4">
-              <a href="#" className="p-2 text-slate-100 hover:text-gray-400">
-                Início
-              </a>
-              <a href="#" className="p-2 text-slate-100 hover:text-gray-400">
-                Categorias
-              </a>
-              <a href="#" className="p-2 text-slate-100 hover:text-gray-400">
-                Carrinho
-              </a>
-              <a href="#" className="p-2 text-slate-100 hover:text-gray-400">
-                Conta
-              </a>
-              </div>
-          </div>
+    <nav className="bg-gray-800 text-slate-100 px-6">
+      <div className="flex items-center justify-between h-16">
+        <a href="#home" className="text-lg font-semibold">
+          Lojas Gabi
+        </a>
+
+        <div className="flex items-center space-x-6">
+          <a href="#" className="hover:text-gray-400">Início</a>
+          <a href="#" className="hover:text-gray-400">Categorias</a>
+          <button onClick={onCartClick} className="relative hover:text-gray-400">
+            🛒
+            {cartCount > 0 && (
+              <span className="absolute -top-2 -right-2 bg-red-500 text-white text-xs w-5 h-5 flex items-center justify-center rounded-full">
+                {cartCount}
+              </span>
+            )}
+          </button>
+          <a href="#" className="hover:text-gray-400">Conta</a>
         </div>
-    </main>
+      </div>
+    </nav>
   );
 }

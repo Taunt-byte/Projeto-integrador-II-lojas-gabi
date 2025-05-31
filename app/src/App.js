@@ -1,12 +1,14 @@
 import React from 'react';
-import Carousel from './Components/Carousel';
-import HomePage from './Components/Home';
+import PromoCarousel from './Pages/Promo';
+import Footer from './Components/Footer'
+import HomePage from './Pages/Home'
 
 function App() {
   return ( 
     <main>
-      <HomePage />
-      <Carousel />
+      <HomePage />   
+      <PromoCarousel />
+      <Footer />
     </main>
   );
 }

@@ -21,16 +21,6 @@ Tudo ok por aqui.
 
 - [Lucas Neves da Silva](https://www.linkedin.com/in/lucas-neves-da-silva-4058211a2/)
 
-- [Karoline Lemos Gouvea Godoy](linkedin.com/in/karoline-lemos-gouvea-godoy-38a292151)
-
-- [Anna Lívia Meireles](linkedin.com/in/anna-lívia-meireles-164342184)
-
-- [Diego Costa](linkedin.com/in/diegoerc)
-
-- [Jordy Nicholas](linkedin.com/in/jordy-nicholas)
-
-
-
 ## Documentação de cores
 
 | Cor               | Hexadecimal                                                |
@@ -95,7 +85,7 @@ Inicie o servidor
 
 ## Suporte
 
-Para suporte, mande um email para lucasluan94@hotmail.com ou entre em contato pelo linkeding.
+Para suporte, entre em contato pelo linkeding.
 
 
 ## Screenshots
