@@ -58,7 +58,12 @@ const HomePage = () => {
         .filter(item => item.quantity > 0) // Remove item se quantidade for 0
     );
   };
-
+const handleCheckout = () => {
+  // Simula confirmação
+  alert("Compra finalizada com sucesso!");
+  setCartItems([]);      // Limpa o carrinho
+  setCartOpen(false);    // Fecha o drawer
+};
   const handleRemove = (title) => {
     setCartItems((prevItems) =>
       prevItems.filter(item => item.title !== title)
@@ -70,6 +75,9 @@ const HomePage = () => {
       <Navbar cartCount={cartItems.length} onCartClick={() => setCartOpen(true)} />
 
       <main className="mt-8 px-6 md:px-20">
+        <div>
+          <h1 className="text-2xl text-center font-semibold font-sans p-8">Mais vendidos</h1>
+        </div>
         <div className="grid md:grid-cols-3 gap-6">
           {randomizedProducts.map((product, index) => (
             <ProductCard
@@ -81,14 +89,16 @@ const HomePage = () => {
         </div>
       </main>
 
-      <CartDrawer
-        isOpen={cartOpen}
-        onClose={() => setCartOpen(false)}
-        cartItems={cartItems}
-        onIncrease={handleIncrease}
-        onDecrease={handleDecrease}
-        onRemove={handleRemove}
-      />
+<CartDrawer
+  isOpen={cartOpen}
+  onClose={() => setCartOpen(false)}
+  cartItems={cartItems}
+  onIncrease={handleIncrease}
+  onDecrease={handleDecrease}
+  onRemove={handleRemove}
+  onCheckout={handleCheckout}
+/>
+
     </div>
   );
 };

@@ -1,8 +1,7 @@
 import React from "react";
 
-const CartDrawer = ({ isOpen, onClose, cartItems, onIncrease, onDecrease, onRemove }) => {
+const CartDrawer = ({ isOpen, onClose, cartItems, onIncrease, onDecrease, onRemove, onCheckout }) => {
   const total = cartItems.reduce((acc, item) => acc + item.price * item.quantity, 0);
-console.log('onIncrease prop:', onIncrease);
 
   return (
     <div
@@ -15,7 +14,7 @@ console.log('onIncrease prop:', onIncrease);
         <button onClick={onClose} className="text-gray-500 hover:text-black">✕</button>
       </div>
 
-      <div className="p-4 overflow-y-auto h-[calc(100%-120px)]">
+      <div className="p-4 overflow-y-auto h-[calc(100%-160px)]">
         {cartItems.length === 0 ? (
           <p className="text-gray-600">Carrinho vazio.</p>
         ) : (
@@ -55,7 +54,11 @@ console.log('onIncrease prop:', onIncrease);
           <span>Total:</span>
           <span>R$ {total.toFixed(2)}</span>
         </div>
-        <button className="mt-4 w-full bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-700 transition">
+        <button
+          onClick={onCheckout}
+          className="mt-4 w-full bg-green-600 text-white py-2 rounded-lg hover:bg-green-700 transition"
+          disabled={cartItems.length === 0}
+        >
           Finalizar compra
         </button>
       </div>
