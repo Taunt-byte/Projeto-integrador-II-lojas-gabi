@@ -1,49 +1,35 @@
-import React, { useState, useMemo } from "react";
+
+import axios from "axios";
+import React, { useState, useMemo , useEffect } from "react";
 import Navbar from "../Components/Navbar";
 import ProductCard from "../Components/ProductCard";
 import CartDrawer from "../Components/CartDrawer";
 import PromoCarousel from "../Pages/Promo";
 
-const products = [
-  {
-    title: "Fone Bluetooth",
-    price: 199.99,
-    image:
-      "https://lojamultilaser.vtexassets.com/arquivos/ids/1361194/9481-00.jpg?v=638718196780230000",
-  },
-  {
-    title: "Smartwatch",
-    price: 349.9,
-    image: "https://http2.mlstatic.com/D_NQ_NP_728225-MLA82946614532_032025-O.webp",
-  },
-  {
-    title: "Câmera HD",
-    price: 499.9,
-    image: "https://via.placeholder.com/300x200?text=Camera",
-  },
-  {
-    title: "Teclado Mecânico",
-    price: 229.9,
-    image: "https://via.placeholder.com/300x200?text=Teclado",
-  },
-  {
-    title: "Mouse Gamer",
-    price: 159.9,
-    image: "https://via.placeholder.com/300x200?text=Mouse",
-  },
-  {
-    title: "Caixa de Som",
-    price: 299.9,
-    image: "https://via.placeholder.com/300x200?text=Caixa+de+Som",
-  },
-];
-
 const shuffleArray = (arr) => [...arr].sort(() => 0.5 - Math.random());
 
 const HomePage = () => {
+  
+  const [products, setProducts] = useState([]);
+  const [error, setError] = useState(null);
   const [cartItems, setCartItems] = useState([]);
   const [cartOpen, setCartOpen] = useState(false);
-  const randomizedProducts = useMemo(() => shuffleArray(products), []);
+  const API_BASE_URL = "http://localhost:3001";
+
+  useEffect(() => {
+    const fetchProducts = async () => {
+      try {
+        const { data } = await axios.get(`${API_BASE_URL}/api/products`);
+        setProducts(data)
+      } catch (error) {
+        const msg = "falha ao carregar produtos"
+        setError(msg)
+      }
+    }
+    fetchProducts()
+  },[]);
+
+  const randomizedProducts = useMemo(() => shuffleArray(products), [products]);
 
   // Adiciona ao carrinho, atualizando quantidade se produto já existir
   const handleAddToCart = (product) => {
@@ -111,8 +97,10 @@ const HomePage = () => {
         <div className="grid md:grid-cols-3 gap-6">
           {randomizedProducts.map((product, index) => (
             <ProductCard
-              key={index}
-              {...product}
+              key={product.id}
+              title={product.title}
+              price={product.price}
+              image={product.imageUrl}
               onAddToCart={() => handleAddToCart(product)}
             />
           ))}

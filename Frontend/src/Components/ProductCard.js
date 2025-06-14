@@ -11,7 +11,7 @@ const ProductCard = ({ title, price, image, onAddToCart }) => {
         />
       </div>
       <h2 className="text-lg font-semibold mt-4">{title}</h2>
-      <p className="text-gray-700 mb-4">R$ {price.toFixed(2)}</p>
+      <p className="text-gray-700 mb-4">R$ {price}</p>
       <button
         onClick={onAddToCart}
         className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700"
